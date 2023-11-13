@@ -1,0 +1,14 @@
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\bin\Debug\net7.0\ToDo_List.exe
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\bin\Debug\net7.0\ToDo_List.deps.json
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\bin\Debug\net7.0\ToDo_List.runtimeconfig.json
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\bin\Debug\net7.0\ToDo_List.dll
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\bin\Debug\net7.0\ToDo_List.pdb
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ToDo_List.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ToDo_List.AssemblyInfoInputs.cache
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ToDo_List.AssemblyInfo.cs
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ToDo_List.csproj.CoreCompileInputs.cache
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ToDo_List.dll
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\refint\ToDo_List.dll
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ToDo_List.pdb
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ToDo_List.genruntimeconfig.cache
+C:\Users\Ben\Desktop\Taking_A_Chance\Create_Three_Projects\Project_One\ToDo_List\obj\Debug\net7.0\ref\ToDo_List.dll
