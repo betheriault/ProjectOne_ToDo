@@ -1,10 +1,11 @@
 # ProjectOne_ToDo
 A Basic ToDo List build as a Console App. Should Save/Load lists and eventually integrate as Blazor WebApp
 
-#                    AUDIT TRAIL                  
+# ---------------- AUDIT TRAIL ----------------                 
 
-11/13/23 bet - Initial Create
-11/18/23 bet - Added Basic To-Do Functionality: Add items to list
+- 11/13/23 bet - Initial Create 
+- 11/18/23 bet - Added Basic To-Do Functionality: Add items to list
+
 
 # Outline:
   -Console App:
