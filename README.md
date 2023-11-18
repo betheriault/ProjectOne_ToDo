@@ -4,6 +4,7 @@ A Basic ToDo List build as a Console App. Should Save/Load lists and eventually 
 #                    AUDIT TRAIL                  
 
 11/13/23 bet - Initial Create
+11/18/23 bet - Added Basic To-Do Functionality: Add items to list
 
 # Outline:
   -Console App:
@@ -22,3 +23,8 @@ Part 2:
 
 Part 3:
 Convert to Blazor webApp	
+
+# Things to Work On:
+
+- Add 'Remove' functionality
+- Optimize (Maybe start list not at '0')
