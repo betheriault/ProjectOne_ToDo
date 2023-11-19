@@ -5,6 +5,7 @@ A Basic ToDo List build as a Console App. Should Save/Load lists and eventually 
 
 - 11/13/23 bet - Initial Create 
 - 11/18/23 bet - Added Basic To-Do Functionality: Add items to list
+- 11/19/23 bet - Added Return, AddItem, printList, and RemoveItem functions
 
 
 # Outline:
@@ -27,5 +28,5 @@ Convert to Blazor webApp
 
 # Things to Work On:
 
-- Add 'Remove' functionality
-- Optimize (Maybe start list not at '0')
+- Fix 'Return' function to actually work
+- Fully test RemoveItem function
