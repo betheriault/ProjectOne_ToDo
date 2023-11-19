@@ -67,11 +67,6 @@ void AddItem()
         System.Console.WriteLine($"Add {itemToAdd} to list? (Y/N?)");
         readInput = Console.ReadLine();
 
-        if(!Return(readInput))
-        {
-            return;
-        }
-
         if(readInput == "Y" || readInput == "y")
         {
            if(!map.ContainsKey(itemToAdd))
@@ -83,14 +78,14 @@ void AddItem()
            else 
             System.Console.WriteLine($"{itemToAdd} already exists, please try again: \n");
 
-            printList(map);
+            PrintList(map);
         }
 
         System.Console.WriteLine("Add another item? (Y/N?)");
         readInput = Console.ReadLine();
 }
 
-void printList(Dictionary<string,int> map)
+void PrintList(Dictionary<string,int> map)
 {
     foreach(var kvp in map)
     {
@@ -102,7 +97,7 @@ void RemoveItem()
 {
     string? itemToRemove;
 
-    printList(map);
+    PrintList(map);
 
     System.Console.WriteLine("Please enter the item you would like to remove: ");
     readInput = Console.ReadLine();
@@ -128,9 +123,9 @@ void RemoveItem()
        }
        else 
         map.Remove(itemToRemove);
-        listItemNumber = map.Count + 1;
+        listItemNumber = map.Count;
         
-        printList(map);
+        PrintList(map);
     }
 
 }
