@@ -15,9 +15,22 @@ readInput = Console.ReadLine();
 
 while(readInput != "exit")
 {
+    //Create Switch
+    switch(readInput)
+    {
+        case "remove":
+        {
+            RemoveItem();
+            break;
+        }
+        default:
+        {
+            AddItem();
+            break;
+        }
+    }
     
-    AddItem();
-    readInput = Console.ReadLine();
+    //readInput = Console.ReadLine();
 }
 System.Console.WriteLine("Exiting...");
 Thread.Sleep(2000);
@@ -56,16 +69,18 @@ void AddItem()
         return;
     }
 
-    if(readInput == "remove")
-    {
-        RemoveItem();
-        return;
-    }
-
+   
     itemToAdd = readInput;
     
         System.Console.WriteLine($"Add {itemToAdd} to list? (Y/N?)");
         readInput = Console.ReadLine();
+
+        if(Return(readInput))
+        {
+            System.Console.WriteLine($"{itemToAdd} not added to list.\nPlease enter an item to add to list or type 'remove' to remove an item: ");
+            readInput = Console.ReadLine();
+            return;
+        }
 
         if(readInput == "Y" || readInput == "y")
         {
@@ -79,10 +94,10 @@ void AddItem()
             System.Console.WriteLine($"{itemToAdd} already exists, please try again: \n");
 
             PrintList(map);
-        }
 
-        System.Console.WriteLine("Add another item? (Y/N?)");
-        readInput = Console.ReadLine();
+            System.Console.WriteLine("Add another item? (Y/N?)");
+            readInput = Console.ReadLine();
+        }
 }
 
 void PrintList(Dictionary<string,int> map)
@@ -124,6 +139,7 @@ void RemoveItem()
        else 
         map.Remove(itemToRemove);
         listItemNumber = map.Count;
+        System.Console.WriteLine($"{itemToRemove} removed from list.");
         
         PrintList(map);
     }
