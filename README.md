@@ -6,6 +6,7 @@ A Basic ToDo List build as a Console App. Should Save/Load lists and eventually 
 - 11/13/23 bet - Initial Create 
 - 11/18/23 bet - Added Basic To-Do Functionality: Add items to list
 - 11/19/23 bet - Added Return, AddItem, printList, and RemoveItem functions
+- 11/25/23 bet - Added Switch statement
 
 
 # Outline:
@@ -30,3 +31,4 @@ Convert to Blazor webApp
 
 - Fix 'Return' function to actually work
 - Fully test RemoveItem function
+- Fix issue after adding item and being asked to add another item, it tried to add that input (Add 'Y' to list?)
