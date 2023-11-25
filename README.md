@@ -31,4 +31,5 @@ Convert to Blazor webApp
 
 - Fix 'Return' function to actually work
 - Fully test RemoveItem function
+- 	Renumbering after removing item needs to be fixed
 - Fix issue after adding item and being asked to add another item, it tried to add that input (Add 'Y' to list?)
