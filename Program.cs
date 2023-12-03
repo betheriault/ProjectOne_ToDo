@@ -9,7 +9,7 @@ int listItemNumber = 1;
 Dictionary<string, int> map = new();
 
 System.Console.WriteLine("=====\t\tTO-DO\t\t=====\n");
-System.Console.WriteLine("Please Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
+System.Console.WriteLine("Welcome to the To-Do App!\nPlease Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
 
 readInput = Console.ReadLine();
 
@@ -20,6 +20,7 @@ while(readInput != "exit")
     {
         case "remove":
         {
+        
             RemoveItem();
             break;
         }
@@ -97,6 +98,18 @@ void AddItem()
 
             System.Console.WriteLine("Add another item? (Y/N?)");
             readInput = Console.ReadLine();
+
+            if(Return(readInput))
+            {
+                System.Console.WriteLine("Welcome to the To-Do App!\nPlease Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
+
+                readInput = Console.ReadLine();
+                return;
+            }
+
+            System.Console.WriteLine("Please enter another item or type 'exit' to leave application: ");
+            readInput = Console.ReadLine();
+
         }
 }
 
@@ -130,18 +143,31 @@ void RemoveItem()
 
     if(readInput == "Y" || readInput == "y")
     {
-       if(!map.ContainsKey(itemToRemove))
+       while(!map.ContainsKey(itemToRemove))
        {
         System.Console.WriteLine($"{itemToRemove} doesn't exists, please try again: \n");
         itemToRemove = Console.ReadLine();
 
        }
-       else 
+       
         map.Remove(itemToRemove);
         listItemNumber = map.Count;
-        System.Console.WriteLine($"{itemToRemove} removed from list.");
+        System.Console.WriteLine($"{itemToRemove} removed from list.\n\n");
+
+        System.Console.WriteLine($"Would you like to remove another item? (Y/N)");
+        readInput = Console.ReadLine();
+
+        if(Return(readInput))
+        {
+            System.Console.WriteLine("Welcome to the To-Do App!\nPlease Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
+
+                readInput = Console.ReadLine();
+                return;
+        }
         
         PrintList(map);
+        System.Console.WriteLine("Please enter another item to remove or type 'exit' to leave app: ");
+        readInput = Console.ReadLine(); 
     }
 
 }
