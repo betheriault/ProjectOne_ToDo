@@ -34,4 +34,5 @@ Convert to Blazor webApp
 
 - Fully test RemoveItem function
   * Renumbering after removing item needs to be fixed (12/3/23 - Convert Dictionary to List?)
+- Begin creating Try/Catch Exception handling for possible null inputs
 - Begin Implementation of Save/Load functionality
