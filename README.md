@@ -8,6 +8,7 @@ A Basic ToDo List build as a Console App. Should Save/Load lists and eventually 
 - 11/19/23 bet - Added Return, AddItem, printList, and RemoveItem functions
 - 11/25/23 bet - Added Switch statement
 - 12/3/23  bet - Fixed 'Return' Functionality in AddItem(), redundant 'Add <item> to list?' issue.
+- 12/10/23 bet - Fixed 'Return' Functionality in RemoveItem(), added IsMapEmpty function and check in RemoveItem(), fixed issue when  trying to remove multiple items.
 
 
 # Outline:
@@ -30,9 +31,7 @@ Convert to Blazor webApp
 
 # Things to Work On:
 
-- Fix 'Return' function to actually work
-  * 12/3/23 - Only needs to be fixed in RemoveItem()
+
 - Fully test RemoveItem function
-  * 12/3/23 - Fix issue when trying to remove multiple items from list (returns to AddItem(), needs to stay in RemoveItem())
   * Renumbering after removing item needs to be fixed (12/3/23 - Convert Dictionary to List?)
 - Begin Implementation of Save/Load functionality
