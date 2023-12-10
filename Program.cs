@@ -6,6 +6,7 @@ using System.Threading;
 
 string? readInput;
 int listItemNumber = 1;
+bool mapEmpty = false;
 Dictionary<string, int> map = new();
 
 System.Console.WriteLine("=====\t\tTO-DO\t\t=====\n");
@@ -21,7 +22,19 @@ while(readInput != "exit")
         case "remove":
         {
         
-            RemoveItem();
+            while(!Return(readInput))
+            {
+                if(readInput == "exit")
+                {
+                    break;
+                }
+                else if (mapEmpty == true)
+                {
+                    break;
+                }
+                RemoveItem();
+                mapEmpty = false;
+            }
             break;
         }
         default:
@@ -53,6 +66,16 @@ bool ValidInput(string input)
 bool Return(string input)
 {
     if (input == "N" || input == "n")
+    {
+        return true;
+    }
+
+    return false;
+}
+
+bool IsMapEmpty(int count)
+{
+    if(count == 0)
     {
         return true;
     }
@@ -124,6 +147,15 @@ void PrintList(Dictionary<string,int> map)
 void RemoveItem()
 {
     string? itemToRemove;
+    
+
+    if(IsMapEmpty(map.Count))
+    {
+        System.Console.WriteLine("There are no items to remove, please add an item to the list or type 'exit' to leave app: ");
+        readInput = Console.ReadLine();
+        mapEmpty = true;
+        return;
+    }
 
     PrintList(map);
 
@@ -165,9 +197,6 @@ void RemoveItem()
                 return;
         }
         
-        PrintList(map);
-        System.Console.WriteLine("Please enter another item to remove or type 'exit' to leave app: ");
-        readInput = Console.ReadLine(); 
     }
 
 }
