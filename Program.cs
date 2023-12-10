@@ -6,10 +6,11 @@ using System.Threading;
 
 string? readInput;
 int listItemNumber = 1;
+bool mapEmpty = false;
 Dictionary<string, int> map = new();
 
 System.Console.WriteLine("=====\t\tTO-DO\t\t=====\n");
-System.Console.WriteLine("Please Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
+System.Console.WriteLine("Welcome to the To-Do App!\nPlease Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
 
 readInput = Console.ReadLine();
 
@@ -20,7 +21,20 @@ while(readInput != "exit")
     {
         case "remove":
         {
-            RemoveItem();
+        
+            while(!Return(readInput))
+            {
+                if(readInput == "exit")
+                {
+                    break;
+                }
+                else if (mapEmpty == true)
+                {
+                    break;
+                }
+                RemoveItem();
+                mapEmpty = false;
+            }
             break;
         }
         default:
@@ -52,6 +66,16 @@ bool ValidInput(string input)
 bool Return(string input)
 {
     if (input == "N" || input == "n")
+    {
+        return true;
+    }
+
+    return false;
+}
+
+bool IsMapEmpty(int count)
+{
+    if(count == 0)
     {
         return true;
     }
@@ -97,6 +121,18 @@ void AddItem()
 
             System.Console.WriteLine("Add another item? (Y/N?)");
             readInput = Console.ReadLine();
+
+            if(Return(readInput))
+            {
+                System.Console.WriteLine("Welcome to the To-Do App!\nPlease Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
+
+                readInput = Console.ReadLine();
+                return;
+            }
+
+            System.Console.WriteLine("Please enter another item or type 'exit' to leave application: ");
+            readInput = Console.ReadLine();
+
         }
 }
 
@@ -111,6 +147,15 @@ void PrintList(Dictionary<string,int> map)
 void RemoveItem()
 {
     string? itemToRemove;
+    
+
+    if(IsMapEmpty(map.Count))
+    {
+        System.Console.WriteLine("There are no items to remove, please add an item to the list or type 'exit' to leave app: ");
+        readInput = Console.ReadLine();
+        mapEmpty = true;
+        return;
+    }
 
     PrintList(map);
 
@@ -130,18 +175,28 @@ void RemoveItem()
 
     if(readInput == "Y" || readInput == "y")
     {
-       if(!map.ContainsKey(itemToRemove))
+       while(!map.ContainsKey(itemToRemove))
        {
         System.Console.WriteLine($"{itemToRemove} doesn't exists, please try again: \n");
         itemToRemove = Console.ReadLine();
 
        }
-       else 
+       
         map.Remove(itemToRemove);
         listItemNumber = map.Count;
-        System.Console.WriteLine($"{itemToRemove} removed from list.");
+        System.Console.WriteLine($"{itemToRemove} removed from list.\n\n");
+
+        System.Console.WriteLine($"Would you like to remove another item? (Y/N)");
+        readInput = Console.ReadLine();
+
+        if(Return(readInput))
+        {
+            System.Console.WriteLine("Welcome to the To-Do App!\nPlease Add an Item or type 'remove' if you've completed a task.\nYou can leave this app by typing 'exit': ");
+
+                readInput = Console.ReadLine();
+                return;
+        }
         
-        PrintList(map);
     }
 
 }
